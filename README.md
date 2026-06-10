@@ -1,11 +1,23 @@
 # ⏰ Programar Apagado
 
-Herramienta para Windows que agrega la opción **"Programar Apagado"** al menú contextual del escritorio (clic derecho), con una interfaz gráfica limpia y moderna.
+Herramienta híbrida para Windows con una interfaz gráfica limpia y moderna que permite programar el apagado del equipo.
 
 ![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D6?style=flat&logo=windows&logoColor=white)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-5391FE?style=flat&logo=powershell&logoColor=white)
 ![Autor](https://img.shields.io/badge/Autor-Jose%20Biojo%20Tenorio-blueviolet?style=flat)
 ![Licencia](https://img.shields.io/badge/Licencia-Propietaria-red?style=flat)
+
+---
+
+## Modos de uso
+
+Este programa está diseñado para ser versátil y adaptarse a tus necesidades. Al ser un ejecutable híbrido, puedes utilizarlo de tres formas:
+
+| Modo | Descripción |
+|---|---|
+| **Portátil (Standalone)** | Abre directamente el `.exe` sin instalar nada en el sistema |
+| **Integrado (Menú Contextual)** | Usa el botón verde integrado para añadirlo al clic derecho de Windows |
+| **Panel de Control** | El mismo `.exe` actúa como desinstalador — el botón cambia a rojo cuando ya está instalado |
 
 ---
 
@@ -18,38 +30,34 @@ Herramienta para Windows que agrega la opción **"Programar Apagado"** al menú 
 
 ## Descripción
 
-La ventana permite elegir entre tiempos rápidos (15 min, 30 min, 1h, 2h, 4h),
-ingresar un tiempo personalizado en minutos, o cancelar un apagado ya programado.
+La ventana permite elegir entre tiempos rápidos (15 min, 30 min, 1h, 2h, 4h), ingresar un tiempo personalizado en minutos, cancelar un apagado ya programado, y gestionar la integración con el sistema de Windows.
 
 ---
 
-## Instalación
+## Instalación (Opcional)
 
-> **Requiere ejecutar como Administrador** (solo para la instalación).
+Si deseas integrar la herramienta al menú contextual de Windows, sigue estos pasos.
 
-1. Descarga o clona este repositorio
-2. Clic derecho sobre `INSTALAR.bat`
-3. Selecciona **"Ejecutar como administrador"**
-4. Listo — aparece en el menú contextual del escritorio
+> Requiere permisos de Administrador únicamente para esta función.
 
-```
-git clone https://github.com/tu-usuario/programar-apagado.git
-cd programar-apagado
-```
+1. Descarga el archivo `ProgramarApagado.exe`
+2. Haz clic derecho sobre el archivo y selecciona **"Ejecutar como administrador"**
+3. Haz clic en el botón verde **"Agregar al menú contextual (clic derecho)"**
+
+Listo — la opción **"Programar Apagado"** aparecerá en el menú contextual de tu escritorio y carpetas.
 
 ---
 
 ## Uso
 
-1. Clic derecho en el **escritorio** o en cualquier **carpeta**
-2. Selecciona **"Programar Apagado"**
-3. Elige el tiempo desde la ventana
+Ya sea abriendo el ejecutable directamente o desde el clic derecho en el escritorio, la interfaz ofrece:
 
 | Opción | Descripción |
 |---|---|
-| 15 / 30 min · 1h / 2h / 4h | Apagado con un solo clic |
-| Tiempo personalizado | Ingresa los minutos que quieras |
-| Cancelar apagado | Anula un apagado ya programado |
+| 15 / 30 min · 1h / 2h / 4h | Programa el apagado con un solo clic |
+| Tiempo personalizado | Ingresa los minutos exactos que requieras |
+| Cancelar apagado programado | Anula cualquier apagado que esté en curso |
+| Botón verde / rojo | Instala o desinstala la opción del menú contextual |
 
 ---
 
@@ -57,10 +65,10 @@ cd programar-apagado
 
 ```
 programar-apagado/
-├── apagado.ps1       # Interfaz gráfica (PowerShell + WinForms)
-├── INSTALAR.bat      # Copia el script y registra el menú contextual
-├── DESINSTALAR.bat   # Revierte todo
-├── LICENSE           # Licencia — propiedad de Jose Biojo Tenorio
+├── ProgramarApagado.exe  # Aplicación principal híbrida (uso y gestor de instalación)
+├── apagado.ps1           # Código fuente (PowerShell + WinForms)
+├── icono.ico             # Icono de la aplicación
+├── LICENSE               # Licencia — propiedad de Jose Biojo Tenorio
 └── README.md
 ```
 
@@ -70,7 +78,7 @@ programar-apagado/
 
 - Windows 10 u 11
 - PowerShell 5.1 o superior (incluido en Windows por defecto)
-- Permisos de administrador (solo para instalar/desinstalar)
+- Permisos de administrador (solo si usas la función de instalar/desinstalar del menú contextual)
 
 ---
 
